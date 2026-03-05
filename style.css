@@ -1,0 +1,290 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+a{
+    text-decoration: none;
+    color: var(--text-color);
+}
+:root{
+    --primary-color: #6C13A4;
+    --secondary-color:rgba(0, 0, 0,1);
+    --accents-color: #EFBF04;
+    --text-color:#fff;
+    --text-color2: #000;
+    --white:#fff;
+    --button: rgba(255, 255, 255, .9);
+    --cover: rgba(0, 0, 0, .5);
+    --cover-white : rgba(255, 255, 255, .5);
+}
+body{
+    display: block;
+    height: 100vh;
+    width: 100%;
+}
+
+header{
+    display: block;
+    height:10vh;
+    width: 100%;
+    position: fixed;
+    background-color: var(--primary-color);
+    color: var(--white);
+    text-align: center;
+    
+}
+header > a> h1{
+    display: block;
+    height: 10vh;
+    width: 100%;
+    line-height: 10vh;
+    font-size: 2rem;
+    color: var(--white);
+    text-decoration: none;
+    border: var(--accents-color) solid 2px;
+}
+
+nav{
+    display: flex;
+    height: 5vh;
+    width: 100%;
+    position: fixed;
+    top: 10vh;
+    background-color: var(--secondary-color);
+    
+}
+nav > ul{
+    display: flex;
+    height: 5vh;
+    width: 100%;
+    list-style: none;
+    gap: 20px;
+    justify-content: space-around;
+    text-align: center;
+}
+nav > a{
+    display: block;
+    height: 5vh;
+    width: 20%;
+    cursor: pointer;
+    text-transform: uppercase;
+    text-decoration: none;
+    text-decoration: none;
+    margin: auto;
+    color: var(--text-color);
+    text-align: center;
+
+}
+
+nav > a:hover{
+    border-radius: 5px;
+    border: SOLID 2px var(--accents-color);
+    color: var(--accents-color);
+    font-size: larger;
+}
+aside.left ,aside.right{
+    display: block;
+    position: fixed;
+    height: 80vh;
+    width: 10%;
+    top: 15vh;
+    background-color: var(--primary-color);
+}
+aside.right{
+    right: 0%;
+}
+
+main{
+    display: block;
+    height: 80vh;
+    width: 100%;
+    margin: auto;
+    position: relative;
+    top: 15vh;
+    z-index: -1;
+}
+div.background{
+    display: block;
+    position: fixed;
+    height: 100%;
+    width: 80%;
+    top: 15vh;
+    left: 10%;
+    z-index: -10000;
+}
+
+div.background > img{
+    display: block;
+    width: 100%;
+    object-fit: cover;
+    opacity: 80%;
+}
+
+
+main >section{
+    display: block;
+    height: 80vh;
+    width: 80%;
+    margin: auto;
+    text-align: center;    
+    color: var(--text-color2);
+    background-color: var(--cover);
+    border-radius: 0 0 10px 10px;
+}
+
+section.greeting > h2{
+    display: block;
+    height: 15vh;
+    width: 100%;
+    padding: 10%;
+    line-height: 10vh;
+    color: var(--text-color);
+    font-size: 4rem;
+    padding: 30% 0 0 0;
+}
+
+section.details{
+    height: 50vh;
+     background-color: var(--white);
+}
+
+section.details>p {
+    display: block;
+    height: 30vh;
+    width: 80%;
+    margin: auto;
+    padding: 5% 0;
+    font-size: 1.25rem;
+    line-height: 1.5rem;
+}
+
+section.products{
+    height:100%;
+    background-color: var(--cover-white);
+    text-align: center;
+    padding: 10% 0 0 0;
+    font-size: 5rem;
+}
+
+section.about{
+    display: block;
+    height: min-content;
+    width: 100%;
+    background-color: var(--white);
+}
+
+section.about > h1{
+    display: block;
+    height: 10vh;
+    width: 100%;
+    line-height: 10vh;
+    font-size: 2rem;
+    color: var(--text-color2); 
+}
+
+section.about > p{
+    display: block;
+    height: 30%;
+    width: 80%;
+    margin: auto;
+    
+    
+}
+section.about >section{
+    display: flex;
+    height: 100%;
+    width: 80%;
+    margin: auto; 
+    justify-content: space-between;
+    padding-top: 5%;
+    padding-bottom: 50px;
+       
+}
+section.about > section > div{
+    display: block;
+    position: relative;
+    height: min-content;
+    width: 45%;
+    margin: 0 auto;
+    background-color: var(--secondary-color);
+    text-align: center;
+    border: 2px solid var(--accents-color);
+    border-radius: 10px;
+    color: var(--text-color);
+}
+
+section.about > section > div:hover{
+    background-color: var(--cover);
+    cursor:pointer ;
+}
+
+section.contact{
+    display: flex;
+    height: min-content;
+    width: 80%;
+    background-color: var(--white);
+    text-align: center;
+    padding: 5% 0;
+}
+
+section.contact> div{
+
+    display: block;
+    position: relative;
+    height: 40vh;
+    width: 45%;
+    margin: 0 auto;
+    background-color: var(--secondary-color);
+    text-align: center;
+    border: 2px solid var(--accents-color);
+    border-radius: 10px;
+    color: var(--text-color);
+
+}
+section.contact > div div{
+    display: flex;
+    flex-wrap: wrap;
+    overflow: hidden;
+    height: 10vh;
+    width: 100%;
+    line-height: 10vh;
+    font-size: 4.5rem;
+    justify-content: space-around;
+}
+section.contact > div  a > i{
+    display: inline-block;
+    height: 10vh;
+    width: 100%;
+    line-height: 10vh;
+    font-size: 2rem;
+    color: var(--accents-color);
+}
+section.contact a{
+    color: var(--accents-color);
+    font-size: smaller;
+}
+section.contact > div>div > a > i{
+    font-size: 4rem;
+}
+section.contact > div  a > i:hover{
+    color: var(--text-color);
+}
+section.contact > div:hover{
+    background-color: var(--white);
+    color: var(--accents-color);
+    cursor:pointer ;
+}
+
+footer{
+    display: block;
+    height: 5vh;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    background-color: var(--primary-color);
+    color: var(--white);
+    text-align: center;
+}
